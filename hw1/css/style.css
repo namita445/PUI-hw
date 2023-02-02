@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=Roboto+Mono:wght@300;400;700&display=swap');
+#logo {
+    width: 300px;
+    margin: 40px;
+}
+
+body {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 26px;
+}
+
+nav {
+    border-top: #000000 solid 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav > a {
+    font-size: 24px;
+    color: black;
+    font-family: 'Roboto Mono', monospace;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 400;
+    margin: 15px;
+}
+
+nav > a:hover {
+    font-weight: 700;
+    background-color: yellow;
+}
+
+h1{
+    text-align: center;
+    font-weight: 200;
+    font-size: 36px;
+}
+
+.product-list{
+    margin-top: 50px;
+    font-size: 26px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.cart-list{
+    text-align: center;
+    margin-top: 50px;
+    font-size: 26px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#detail{
+    margin-top: 50px;
+    font-size: 26px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.cart-img{
+    width: 150px;
+    height: 150px;
+    border: #000000 solid 3px; 
+}
+
+#detail-img{
+    width: 500px;
+    height: 500px;
+    border: #000000 solid 3px; 
+}
+
+.product{
+    padding: 10px;
+    max-width: min-content;
+}
+
+.cart-item{
+    max-width: max-content;
+    margin-bottom:50px;
+}
+
+.cart-checkout{
+    width: 600px;
+    border-top: #000000 solid 5px; 
+}
+
+.product:hover{
+    background-color: yellow;
+}
+
+.product-title{
+    text-decoration: #D3D3D3 underline 1px;
+}
+
+.cart-price{
+    font-size: 30px;
+    padding: 20px;
+}
+.product-img{
+    width: 300px;
+    height: 300px;
+    border: #000000 solid 3px; 
+}
+
+.cart-title{
+    margin: 10px;
+}
+
+button{
+    border: #000000 solid 3px;
+    font-size: 26px;
+    font-weight: 700;
+    padding:10px;
+    background-color: yellow; 
+}
+
+figcaption{
+    font-size:14px;
+    font-weight: 700;
+}
+
+a:visited { 
+    text-decoration: none; 
+    color: black; 
+}
+
+.detail-price{
+    font-weight: 700;
+    padding: 30px;
+}
+
+.detail-checkout{
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+}
+
+#detail-selection{
+    display: flex;
+    flex-direction: column;  
+    flex-wrap: wrap;
+    max-width: 350px;
+}
+
+.select-item{
+    padding: 20px;
+}

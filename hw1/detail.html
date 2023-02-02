@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="UTF-8">
+  <head>
+    <title>Bun Bun Mockup HW1</title>
+    <link rel="stylesheet" href="css/style.css">
+    <a href="gallery.html"><img id="logo" src="logo/logo-01.svg"></a>     
+  </head> 
+  <body>
+    <header>
+        <nav>
+            <a href="gallery.html">Products</a>
+            <a href="cart.html">Cart</a>
+        </nav>
+    </header>
+    <main>
+        <div id="detail">
+            <h1>Original cinnamon roll</h1>
+            <img id="detail-img" src="products/original-cinnamon-roll.jpg"> 
+            <div id="detail-selection">
+                <div class="select-item">Customize our delicious, hand-made cinammon roll to your liking!</div>
+                <div class="select-item">
+                    <div><label for="glazing">Glazing:</label></div>
+                        <div><select name="glazing"> 
+                            <option value="keeporiginal">Keep original</option>
+                            <option value="sugarmilk">Sugar milk</option>
+                            <option value="vanillamilk">Vanilla milk</option>
+                            <option value="doublechoco">Double chocolate</option>
+                        </select></div>
+                </div>
+                <div class="select-item">
+                    <div><label for="packsize">Pack size:</label></div>
+                    <div><select name="packsize"> 
+                        <option value="1">1</option>
+                        <option value="3">3</option>
+                        <option value="6">6</option>
+                        <option value="12">12</option>
+                    </select></div>
+                </div>
+            </div>
+            <div class="detail-checkout">
+                <div class="detail-price">$2.49</div>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+    </main>
+  </body>
+</html>
