@@ -1,16 +1,28 @@
-let currentGlaze = 0.0;
-let currentPack = 1.0;
-let base = 2.49;
-
-
-const glazingOptions = {
-    "Keep original": 0.0,
-    "Sugar milk": 0.0,
+let glazingOptions = {
+    "Keep original": 0.00,
+    "Sugar milk": 0.00,
     "Vanilla milk": 0.50,
     "Double chocolate": 1.50
 }
 
-const selectGlaze = document.querySelector("#glazingOptions");
+let packsizeOptions = {
+    1: 1,
+    3: 3,
+    6: 5,
+    12: 10
+}
+
+//set defaults
+let currentGlaze = glazingOptions["Keep original"];
+let currentPack = packsizeOptions[1];
+let base = 2.49;
+
+
+let selectGlaze = document.querySelector("#glazingOptions");
+let selectPack = document.querySelector("#packsizeOptions");
+
+
+//dynamically populate
 for (glaze in glazingOptions) {
     var option = document.createElement('option');
     option.text = glaze;
@@ -18,14 +30,6 @@ for (glaze in glazingOptions) {
     selectGlaze.appendChild(option);
 }
 
-const packsizeOptions = {
-    1: 1.00,
-    3: 3.00,
-    6: 5.00,
-    12: 10.00
-}
-
-let selectPack = document.querySelector("#packsizeOptions");
 for (pack in packsizeOptions) {
     var option = document.createElement('option');
     option.text = pack;
@@ -33,20 +37,23 @@ for (pack in packsizeOptions) {
     selectPack.appendChild(option);
 }
 
-function calculate(){
-    let price = (base + currentGlaze) * currentPack;
-    document.querySelector("#detail-price").innerHTML = price.toFixed(2);
-}
-
+//update price on select change
 function glazingChange(){
     currentGlaze = parseFloat(this.value);
-    let price = (base + currentGlaze) * currentPack;
-    document.querySelector("#detail-price").innerHTML = price.toFixed(2);
+    calculate();
 }
 
 function packsizeChange(){
     currentPack = parseFloat(this.value);
     calculate();
 }
+
+//window.onload = function() { populateOptions() };
 selectGlaze.addEventListener('change', glazingChange);
-selectGlaze.addEventListener('change', packsizeChange);
+selectPack.addEventListener('change', packsizeChange);
+
+function calculate(){
+    let price = (base + currentGlaze) * currentPack;
+    document.querySelector("#detail-price").innerHTML = price.toFixed(2);
+    //cuts two decimal spaces
+}
