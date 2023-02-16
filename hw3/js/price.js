@@ -1,15 +1,16 @@
-let currentGlaze;
-let currentPack;
+let currentGlaze = 0.0;
+let currentPack = 1.0;
+let base = 2.49;
 
 
 const glazingOptions = {
-    "Keep original": 0.00,
-    "Sugar milk": 0.00,
+    "Keep original": 0.0,
+    "Sugar milk": 0.0,
     "Vanilla milk": 0.50,
     "Double chocolate": 1.50
 }
 
-let selectGlaze = document.querySelector("#glazingOptions");
+const selectGlaze = document.querySelector("#glazingOptions");
 for (glaze in glazingOptions) {
     var option = document.createElement('option');
     option.text = glaze;
@@ -32,11 +33,20 @@ for (pack in packsizeOptions) {
     selectPack.appendChild(option);
 }
 
-let price = document.querySelector("#detail-price");
-function glazingChange(element){
-    const priceChange = parseFloat(element.value);
-    const newprice = priceChange + 2.00;
-    price.innerText = newprice.toFixed(2);
+function calculate(){
+    let price = (base + currentGlaze) * currentPack;
+    document.querySelector("#detail-price").innerHTML = price.toFixed(2);
 }
 
-selectGlaze.addEventListener("change", glazingChange);
+function glazingChange(){
+    currentGlaze = parseFloat(this.value);
+    let price = (base + currentGlaze) * currentPack;
+    document.querySelector("#detail-price").innerHTML = price.toFixed(2);
+}
+
+function packsizeChange(){
+    currentPack = parseFloat(this.value);
+    calculate();
+}
+selectGlaze.addEventListener('change', glazingChange);
+selectGlaze.addEventListener('change', packsizeChange);
