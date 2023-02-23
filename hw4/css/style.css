@@ -89,7 +89,7 @@ h1{
     max-width: min-content;
 }
 
-.cart-list{
+.cart{
     text-align: center;
     margin-top: 50px;
     margin-left: auto;
@@ -99,6 +99,11 @@ h1{
     display: flex;
     flex-direction: column;
     padding-right: 10%;
+}
+
+#cart-list{
+    display: flex;
+    flex-direction: column;
 }
 
 .cart-item{
@@ -169,6 +174,10 @@ button{
     font-weight: 700;
     padding:10px;
     background-color: yellow; 
+}
+
+button.hover{
+    cursor: pointer;
 }
 
 figcaption{

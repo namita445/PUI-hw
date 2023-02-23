@@ -4,6 +4,7 @@
     <head>
         <title>Bun Bun Mockup HW2</title>
         <link rel="stylesheet" href="css/style.css">
+        <script defer src="js/price.js" type="text/javascript"></script>
     </head>
     <body>
         <header>
@@ -23,22 +24,18 @@
             </div>
         </header>
         <main>
-            <div class="cart-list">
-                <div class="cart-item">
-                    <figure>
-                        <img class="cart-img" src="products/original-cinnamon-roll.jpg">
-                        <figcaption>Remove</figcaption> 
-                    </figure>
-                    <div class="cart-title">Original cinnamon roll<br>Glazing: Keep original<br>Pack Size: 1</div>
-                    <div class="cart-price">$2.49</div>
-                </div>
-                <div class="cart-item">
-                    <figure>
-                        <img class="cart-img" src="products/double-chocolate-cinnamon-roll.jpg"> 
-                        <figcaption>Remove</figcaption> 
-                    </figure>
-                    <div class="cart-title">Double-chocolate cinnamon roll<br>Glazing: Sugar milk<br>Pack Size: 6</div>
-                    <div class="cart-price">$27.45</div>
+            <div class="cart">
+                <div id="cart-list">
+                    <template id="cart-template">
+                        <div class="cart-item">
+                            <figure>
+                                <img class="cart-img" src="">
+                                <figcaption>Remove</figcaption> 
+                            </figure>
+                            <div class="cart-title"><br><span class="cart-glaze"></span><br><span class="cart-pack"></span></div>
+                            <div class="cart-price"></div>
+                        </div>
+                    </template>
                 </div>
                 <div class="cart-checkout">
                     <div class="cart-total">Total</div>
