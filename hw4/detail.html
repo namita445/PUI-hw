@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Bun Bun Mockup HW2</title>
+        <link rel="stylesheet" href="css/style.css">
+        <script defer src="js/price.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <header>
+            <div class="nav-main">
+                <div>
+                    <a href="index.html"><img id="logo" src="logo/logo-01.svg"></a>
+                </div>
+                <div class="nav-item">
+                    <nav>  
+                        <a href="index.html">Products</a>
+                        <a href="cart.html">Cart</a>
+                    </nav>
+                    <div>
+                        <h1>Original cinnamon roll</h1>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div id="detail">
+                <img id="detail-img" src="products/original-cinnamon-roll.jpg"> 
+                <div id="detail-selection">
+                    <div class="select-item">Customize our delicious, hand-made cinammon roll to your liking!</div>
+                    <div class="select-item">
+                        <div><label for="glazing">Glazing:</label></div>
+                            <div><select id="glazingOptions" onchange="glazingChange(this)"></select></div>
+                    </div>
+                    <div class="select-item">
+                        <div><label for="packsize">Pack size:</label></div>
+                        <div><select id="packsizeOptions" onchange="packsizeChange(this)"></select></div>
+                    </div>
+                    <div class="detail-checkout">
+                        <div id="detail-wrapper">$<span id="detail-price">2.49</span></div>
+                        <button>Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
