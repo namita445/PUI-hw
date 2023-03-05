@@ -62,17 +62,34 @@ cartArray.push(walnut);
 cartArray.push(raisin);
 cartArray.push(apple);
 
-function deleteRoll(roll) {
-    roll.element.remove();
-    cartArray.pop(roll);
-}
+/*function calculateTotal(){
+    let total = 0.0;
+    for (const item of cartArray) {
+        total += parseFloat(item.totalPrice);
+    } 
+    document.querySelector("cart-price").innerText.replace = "$" + total.toFixed(2);
+}*/
 
 function calculate(base, currentGlaze, currentPack){
     return ((base + currentGlaze) * currentPack).toFixed(2);
 }
 
+function deleteRoll(roll) {
+    if (cartArray.length > 0) {
+        roll.element.remove();
+        cartArray.pop(roll);
+        addTotal(-roll.totalPrice);
+    }
+}
+
+function addTotal(price) {
+    const cartTotal = document.querySelector(".cart-price");
+    let onlyDigs = cartTotal.innerText.replace("$ ", "");
+    let totalComp = parseFloat(onlyDigs) + parseFloat(price);
+    cartTotal.innerText="$ " + totalComp.toFixed(2);
+}
+
 function updateCart(roll) {
-    // get the HTML elements that need updating
     const rollTitle = roll.element.querySelector('.cart-title');
     const rollPack = roll.element.querySelector('.cart-pack');
     const rollImg = roll.element.querySelector(".cart-img");
@@ -85,7 +102,9 @@ function updateCart(roll) {
     let glazeName = roll.glazing.charAt(0) + roll.glazing.slice(1).toLowerCase();
     let total = calculate(roll.basePrice, glazingOptions[glazeName], packsizeOptions[roll.size]);
     rollPrice.textContent = "$" + total;
+    roll.totalPrice = parseFloat(total).toFixed(2);
     rollImg.src = 'products/' + rolls[roll.type].imageFile;
+    addTotal(total);
 }
 
 function createProduct(roll) {
@@ -106,5 +125,8 @@ for (const item of cartArray) {
     console.log(item);
     createProduct(item);
 }
+
+
+
 
 
