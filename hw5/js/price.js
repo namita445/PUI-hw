@@ -122,28 +122,3 @@ function addCart() {
     console.log(cartArray);
 }
 
-/*function createProduct(roll) {
-    const template = document.querySelector("#cart-template");
-    const copy = template.textContent.cloneNode(true);
-    roll.element = copy.querySelector(".cart-item");
-    const parent = document.querySelector("#cart-list");
-    parent.prepend(roll.element);
-    updateCart(roll);
-}
-
-function updateCart(roll) {
-    // get the HTML elements that need updating
-    //const rollTitle = roll.element.querySelector('.cart-title');
-    //const rollPack = roll.element.querySelector('.cart-pack');
-    const rollImg = roll.element.querySelector(".cart-img");
-    //const rollGlaze = roll.element.querySelector('.cart-glaze');    
-
-    // copy our notecard content over to the corresponding HTML elements
-    rollImg.src = rolls[roll[rollType]].imageFile;
-}
-
-for (const item of cartArray) {
-    console.log(item);
-    createProduct(item);
-}*/
-
