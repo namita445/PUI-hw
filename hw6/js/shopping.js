@@ -1,4 +1,4 @@
-const rolls = {
+/*let rolls = {
     "Original": {
         "basePrice": 2.49,
         "imageFile": "original-cinnamon-roll.jpg"
@@ -47,21 +47,16 @@ class Roll {
         this.basePrice = rollPrice;
         this.element = null;
         this.totalPrice = 0;
-    }
+    }*/
+
+function addTotal(price) {
+    const cartTotal = document.querySelector(".cart-price");
+    let onlyDigs = cartTotal.innerText.replace("$ ", "");
+    let totalComp = parseFloat(onlyDigs) + parseFloat(price);
+    cartTotal.innerText="$ " + totalComp.toFixed(2);
 }
 
-let cartArray = [];
-
-function calculate(base, currentGlaze, currentPack){
-    return ((base + currentGlaze) * currentPack).toFixed(2);
-}
-
-function saveToLocalStorage() {
-    const cartArrayString = JSON.stringify(cartArray);
-    console.log(cartArrayString);
-    localStorage.setItem('storedCart', cartArrayString);
-}
-
+/* this function stays */
 function deleteRoll(roll) {
     if (cartArray.length > 0) {
         roll.element.remove();
@@ -71,13 +66,7 @@ function deleteRoll(roll) {
     saveToLocalStorage();
 }
 
-function addTotal(price) {
-    const cartTotal = document.querySelector(".cart-price");
-    let onlyDigs = cartTotal.innerText.replace("$ ", "");
-    let totalComp = parseFloat(onlyDigs) + parseFloat(price);
-    cartTotal.innerText="$ " + totalComp.toFixed(2);
-}
-
+/* this function stays */
 function updateCart(roll) {
     const rollTitle = roll.element.querySelector('.cart-title');
     const rollPack = roll.element.querySelector('.cart-pack');
@@ -96,6 +85,7 @@ function updateCart(roll) {
     addTotal(total);
 }
 
+/* this function stays */
 function createProduct(roll) {
     const template = document.querySelector("#cart-template");
     const copy = template.content.cloneNode(true);
@@ -110,17 +100,9 @@ function createProduct(roll) {
     updateCart(roll);
 }
 
-/*adapted from lab 6*/
-function retrieveFromLocalStorage() {
-    const cartArrayString = localStorage.getItem('storedCart');
-    const arraycart = JSON.parse(cartArrayString);
-    for (const item of arraycart) {
-        console.log(item);
-        cartArray.push(item);
-        createProduct(item);
-    }
-}
 
-if (localStorage.getItem('storedCart') != null) {
-    retrieveFromLocalStorage();
+for (const item of cartArray) {
+    console.log(item);
+
+    createProduct(item);
 }
