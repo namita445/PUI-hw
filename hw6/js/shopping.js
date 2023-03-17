@@ -66,6 +66,9 @@ function deleteRoll(roll) {
     saveToLocalStorage();
 }
 
+function calculate(base, currentGlaze, currentPack){
+    return ((base + currentGlaze) * currentPack).toFixed(2);
+}
 /* this function stays */
 function updateCart(roll) {
     const rollTitle = roll.element.querySelector('.cart-title');
@@ -77,12 +80,10 @@ function updateCart(roll) {
     rollTitle.textContent = roll.type + " Cinnamon Roll";
     rollPack.textContent = "Pack Size: " + roll.size;
     rollGlaze.textContent = "Glazing: " + roll.glazing; 
-    let glazeName = roll.glazing.charAt(0) + roll.glazing.slice(1).toLowerCase();
-    let total = calculate(roll.basePrice, glazingOptions[glazeName], packsizeOptions[roll.size]);
-    rollPrice.textContent = "$" + total;
-    roll.totalPrice = parseFloat(total).toFixed(2);
+    rollPrice.textContent = "$" + roll.totalPrice;
+    roll.totalPrice = parseFloat(roll.totalPrice).toFixed(2);
     rollImg.src = 'products/' + rolls[roll.type].imageFile;
-    addTotal(total);
+    addTotal(roll.totalPrice);
 }
 
 /* this function stays */
