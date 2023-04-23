@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Bun Bun Mockup HW6</title>
+        <link rel="stylesheet" href="css/style.css">
+        <script defer src="js/price.js"></script>
+        <script defer src="js/shopping.js"></script>
+
+    </head>
+    <body>
+        <header>
+            <div class="nav-main">
+                <div>
+                    <a href="index.html"><img id="logo" src="logo/logo-01.svg"></a>
+                </div>
+                <div class="nav-item">
+                    <nav>  
+                        <a href="index.html">Products</a>
+                        <a href="cart.html">Cart</a>
+                    </nav>
+                    <div>
+                        <h1>Shopping Cart</h1>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="cart">
+                <div id="cart-list">
+                    <template id="cart-template">
+                        <div class="cart-item">
+                            <figure>
+                                <img class="cart-img" src="">
+                                <figcaption class="remove">Remove</figcaption> 
+                            </figure>
+                            <div class="cart-info">
+                                <div class="cart-title"></div>
+                                <div class="cart-glaze"></div>
+                                <div class="cart-pack"></div>
+                            </div>
+                            <div class="item-price"></div>
+                        </div>
+                    </template>
+                </div>
+                <div class="cart-checkout">
+                    <div class="cart-total">Total</div>
+                    <div class="cart-price">$ 0.00</div>
+                </div>
+                <div class="cart-button-section"><button class="cart-button">Checkout</button></div>
+            </div> 
+        </main>
+    </body>
+</html>
