@@ -1,5 +1,9 @@
-Namita's PUI homework - Spring 2023
+Namita's Final PUI Project - Spring 2023
 
-Deployed website: https://namita445.github.io/PUI-hw/index.html 
+Deployed website: https://namita445.github.io/final-project/index.html 
 
-Repository link: https://github.com/namita445/PUI-hw/
+Final Write-Up: 
+
+Demo link: 
+https://drive.google.com/file/d/1Ox-9A357JXENdgPa8t8JYPl7Ej2FtEYF/view?usp=share_link
+
