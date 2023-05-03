@@ -139,11 +139,21 @@ nav > a:hover {
     background-color: #ffe2cd; 
 }
 
+#smaller{
+    font-size: 18px;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 #about{
     display: flex;
-    height: 80vh;
-    justify-content: center;
-    align-items: center;
+    height: 100vh;
+    justify-content: flex-start;
+    align-items: flex-start;
     margin-left: 60px;
     margin-right:60px;
     flex-direction: row;
@@ -216,6 +226,11 @@ nav > a:hover {
 
 }
 
+.linked{
+    margin-bottom:10px;
+    text-align:center;
+    width:70%;
+}
 
 #quicklinks{
     justify-content: center;
