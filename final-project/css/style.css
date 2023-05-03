@@ -12,23 +12,26 @@ body {
 }
 
 nav {
-    padding: 20px;
     display: flex;
-    position: relative;
     flex-direction: row;
     justify-content: center;
 }
 
+h3 {
+    margin-left: 20px;
+}
+
 .nav-main{
-    height: 250px;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
+    align-items: flex-start;
 }
 
-.nav-item{
+.nav-items{
     padding: 20px;
     flex-grow: 0.8;
+    align-items: center;
 }
 
 nav > a {
@@ -53,6 +56,68 @@ nav > a:hover {
     padding: 10px 30px;
 }
 
+#home-tags{
+    display:flex;
+    flex-wrap: wrap;
+    justify-items:first baseline;
+    gap: 20px;
+    padding: 20px;
+}
+
+.tag{
+    color: white;
+    border-radius: 40px;
+    padding: 10px 30px;
+    font-weight: 500;
+    font-size: 24px;
+}
+
+#tag1{
+    background-color: #E65969; 
+}
+
+#tag2{
+    background-color: #F09163;
+}
+
+#tag3{
+    background-color: #7CB49D;
+}
+
+/*Following is from https://forum.squarespace.com/topic/195193-bouncing-scroll-down-indicator-in-squarespace-71/*/
+.arrow {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    margin-top: 10px;
+    transform: translate(-50%,-50%);
+}
+
+.arrow span {
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-bottom: 3px solid #000;
+    border-right: 3px solid #000;
+    transform: rotate(45deg);
+    margin: -10px;
+    animation: animate 1.8s ease infinite;
+}
+
+@keyframes animate {
+    0%{
+        opacity: 0;
+        transform: rotate(45deg) translate(-20px,-20px);
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        transform: rotate(45deg) translate(20px,20px);
+    }
+}
+
 h1{
     font-weight: 200;
     margin-left: 30px;
@@ -69,8 +134,70 @@ h2{
 
 #background{
     background-color: #FBEBED;
-    min-width: 80vh;
-    min-height: 80vh;
+    width: 100vw;
+    height:100vh;
+    scroll-snap-align: start;
+    overflow: hidden;
+}
+
+#backgroundnosnap{
+    background-color: #FBEBED;
+    width: 100vw;
+    height:100vh;
+    overflow: hidden;
+}
+
+.container{
+    height:100vh;
+    display: flex;
+    background-color: #ffafa4;
+    scroll-snap-align: start;
+    align-items: center;
+    justify-content: center;
+}
+
+.containernosnap{
+    height:100vh;
+    display: flex;
+    background-color: #ffafa4;
+    align-items: center;
+    justify-content: center; 
+}
+
+.casestudies{
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;  
+}
+
+.casestudiesnosnap{
+    height:100vh;
+}
+
+.studytitle{
+    justify-content: flex-start;
+}
+
+.studycover{
+    height: 300px;
+    width: auto;
+    z-index: 2 ;
+}
+
+#google {
+    background-color: rgb(200, 217, 235);
+}
+
+#tinder {
+    background-color: pink;
+}
+
+#rimsys {
+    background-color: rgb(189, 188, 232);
+}
+
+#hhelper {
+    background-color: rgb(161, 217, 244);
 }
 
 .product-list{
@@ -203,15 +330,16 @@ h2{
 }
 
 button{
-    border: #000000 solid 3px;
-    font-size: 26px;
+    border: #ffafaf solid 2px;
+    font-size: 20px;
+    border-radius: 30px;
     font-weight: 700;
-    padding:10px;
-    background-color: yellow; 
+    padding: 10px 20px 10px 20px;
 }
 
 button:hover{
     cursor: pointer;
+    background-color: white;
 }
 
 figcaption{

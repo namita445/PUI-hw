@@ -1,0 +1,41 @@
+gsap.registerPlugin(ScrollTrigger);
+
+ScrollTrigger.defaults({scroller: ".casestudies"});
+
+gsap.utils.toArray('.studycover').forEach(image => {
+    gsap.to(image, {
+        opacity: 0,
+        scrollTrigger:{
+            trigger: image,
+            start: "top bottom",
+            end: "bottom top",
+            scrub: 0.5,
+            markers: true,
+            onUpdate: self => {
+                const direction = self.direction;
+                if (direction === -1) {
+                    // Scroll is going up
+                    gsap.to(image, {
+                        y: 50,
+                        opacity: 1,
+                        duration: 1
+                    });
+                } else {
+                    // Scroll is going down
+                    gsap.to(image, {
+                        y: -80,
+                        opacity: 1,
+                        duration: 1
+                    });
+                }
+            },
+            onToggle: self => {
+                if (self.direction === 1) {
+                    gsap.to(image, {
+                        opacity: 1
+                    });
+                }
+            }
+        }, 
+    });
+});
