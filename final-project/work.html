@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
     <head>
         <title>Namita Rao's Portfolio</title>
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/cursor.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
         <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
         <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
@@ -20,60 +21,102 @@
             <section class="container">
                 <section id="background">
                     <header class="nav-main">
-                        <a href="index.html"><img id="logo" src="logo/initials.png"></a>
+                        <a aria-label="back to home page" href="index.html">
+                            <img id="logo" alt="personal logo of the initials 'nr' in a galaxy design" src="logo/initials.png">
+                        </a>
                         <nav class="nav-items">
-                            <a href="index.html">Home</a>
-                            <a href="work.html">Work</a>
-                            <a href="https://drive.google.com/file/d/1alKSdgrVxvfV6UrDmJOWCgTDhWSAVEGC/view?usp=share_link">Resume</a>
-                            <a href="mentor.html">Mentorship</a>
+                            <a aria-label="back to home page" href="index.html">Home</a>
+                            <a aria-label="page of UX Design case studies" href="work.html">Work</a>
+                            <a aria-label="opens up a new tab of a Google Drive link to resume" href="https://drive.google.com/file/d/1alKSdgrVxvfV6UrDmJOWCgTDhWSAVEGC/view?usp=share_link" target='_blank'>Resume</a>
+                            <a aria-label="page to book mentorship appointments" href="mentor.html">Mentorship</a>
                         </nav>
+                        <div class='social'>
+                            <a aria-label="opens new tab to Namita's LinkedIn social media profile" href='https://www.linkedin.com/in/namitasrao/' target='_blank'><i class='fa fa-linkedin'></i></a>
+                            <a aria-label="opens new tab to Namita's Behance social media profile" href='https://www.behance.net/namitar' target='_blank'><i class='fa fa-behance'></i></a>
+                        </div>
                     </header>
-                    <section>
-                        <button type="button" id="googlejump">
-                            Google
-                        </button> 
-                        <button type="button" id="tinderjump">
-                            Tinder
-                        </button>
-                        <button type="button" id="rimsysjump">
-                            Rimsys
-                        </button> 
-                        <button type="button" id="homejump">
-                            Homebuying Helper
-                        </button> 
+                    <section id="workcontent">
+                        <div id="worktext">
+                            <h1>My Work 💪🏽</h1>
+                            <p>Incoming User Experience Intern @ Google 🔍 this summer. Last summer, I interned at Tinder on the Obsidian Design System team. I’ve previously worked as a UX Designer at EmpiricaLab, Rimsys, Caravel Associates. Check out my work below!</p>  
+                            <h5>Quick Links:</h5> 
+                        </div>
+                        <div id="quicklinks">
+                            <button label="auto-scrolls and jumps down to the Tinder case study" type="button" class="tag" id="tinderjump">
+                                Tinder
+                            </button>
+                            <button label="auto-scrolls and jumps down to the Rimsys case study" type="button"class="tag" id="rimsysjump">
+                                Rimsys
+                            </button> 
+                            <button label="auto-scrolls and jumps down to the Homebuying Helper case study" type="button"class="tag" id="homejump">
+                                Homebuying Helper
+                            </button> 
+                            <button type="button" label="auto-scrolls and jumps down to the Spin Dashboard case study"class="tag"id="spinjump">
+                                Spin Dashboard
+                            </button> 
+                        </div>
                     </section>
                 </section>   
             </section>
-            <section class="container" id="google">
-                <div>
-                    <h2 class ="studytitle">Google</h2>
-                </div>
-                <div>
-                    <img class="studycover" src="images/workbg.jpg">
-                </div>
-            </section>
             <section class="container" id="tinder">
-                <div>
-                    <h2 class ="studytitle">Tinder</h2>
-                </div>
-                <div>
-                    <img class="studycover" src="images/tindernew.jpg">
+                <div class="wrapper">
+                    <div>
+                        <h2 class ="studytitle">Tinder</h2>
+                        <figcaption>
+                            Contributed modal component to Tinder's Obsidian Design System
+                        </figcaption>
+                        <button type="button" label="opens new page to case study" id="linked">
+                            View Case Study
+                        </button> 
+                    </div>
+                    <img class="studycover" alt="cover photo for tinder's case study featuring the modal variants" src="images/tindernew.jpg">
                 </div>
             </section>
             <section class="container" id="rimsys">
-                <div>
-                    <h2 class ="studytitle">Rimsys</h2>
-                </div>
-                <div>
-                    <img class="studycover" src="images/rimsysnew.jpg">
+                <div class="wrapper">
+                    <div>
+                        <h2 class ="studytitle">Rimsys</h2>
+                        <figcaption>
+                            Revamped the design system for Rimsys Regulatory Management and implemented 
+                            components on the new repo to improve client experience
+                        </figcaption>
+                        <button type="button" label="opens new page to case study" id="linked">
+                            View Case Study
+                        </button> 
+                    </div>
+                    <div>
+                        <img class="studycover" alt="cover photo for rimsys's case study with branded elements" src="images/rimsysnew.jpg">
+                    </div>
                 </div>
             </section>
             <section class="container" id="hhelper">
-                <div>
-                    <h2 class ="studytitle">Homebuying Helper</h2>
+                <div class="wrapper">
+                    <div>
+                        <h2 class ="studytitle">Homebuying Helper</h2>
+                        <figcaption>
+                            An online platform designed with educational tools and 
+                            resources to simplify the home-buying process for first-time buyers
+                        </figcaption>
+                        <button type="button" label="opens new page to case study" id="linked">
+                            View Case Study
+                        </button> 
+                    </div>
+                        <img class="studycover" alt="cover photo for Homebuying Helper's case study with the landing page of a cartoon family standing in the front" src="images/hhelpernew.jpg">
                 </div>
-                <div>
-                    <img class="studycover" src="images/hhelpernew.jpg">
+            </section>
+            <section class="container" id="spin">
+                <div class="wrapper">
+                    <div>
+                        <h2 class ="studytitle">Spin Dashboard</h2>
+                        <figcaption>
+                            A data-driven dashboard aimed to serve both gig workers and data analysts working at 
+                            Pittsburgh’s SPIN Scooters
+                        </figcaption>
+                        <button type="button" label="opens new page to case study" id="linked">
+                            View Case Study
+                        </button> 
+                    </div>
+                    <img class="studycover" alt="cover photo for Spin Dashboard's case study featuring snippets of the dashboard UI" src="images/spinnew.jpg">
                 </div>
             </section>
         </main>

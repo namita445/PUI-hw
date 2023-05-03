@@ -37,7 +37,7 @@ function scrollToSection(tagName){
   });
 };
 
-document.getElementById("googlejump").addEventListener("click", function() {scrollToSection("#google")});
 document.getElementById("tinderjump").addEventListener("click", function() {scrollToSection("#tinder")});
 document.getElementById("rimsysjump").addEventListener("click", function() {scrollToSection("#rimsys")});
 document.getElementById("homejump").addEventListener("click", function() {scrollToSection("#hhelper")});
+document.getElementById("spinjump").addEventListener("click", function() {scrollToSection("#spin")});

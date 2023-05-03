@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
 
 <head>
     <title>Namita Rao's Portfolio</title>
     <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/cursor.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
         <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
         <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
@@ -17,19 +18,30 @@
 </head>
 
 <body>
-    <section id="background">
+    <section id="backgroundmentor">
         <header class="nav-main">
-            <a href="index.html"><img id="logo" src="logo/initials.png"></a>
+            <a aria-label="back to home page" href="index.html">
+                <img id="logo" alt="personal logo of the initials 'nr' in a galaxy design" src="logo/initials.png">
+            </a>
             <nav class="nav-items">
-                <a href="index.html">Home</a>
-                <a href="work.html">Work</a>
-                <a href="https://drive.google.com/file/d/1alKSdgrVxvfV6UrDmJOWCgTDhWSAVEGC/view?usp=share_link">Resume</a>
-                <a href="mentor.html">Mentorship</a>
+                <a aria-label="back to home page" href="index.html">Home</a>
+                <a aria-label="page of UX Design case studies" href="work.html">Work</a>
+                <a aria-label="opens up a new tab of a Google Drive link to resume" href="https://drive.google.com/file/d/1alKSdgrVxvfV6UrDmJOWCgTDhWSAVEGC/view?usp=share_link" target='_blank'>Resume</a>
+                <a aria-label="page to book mentorship appointments" href="mentor.html">Mentorship</a>
             </nav>
+            <div class='social'>
+                <a aria-label="opens new tab to Namita's LinkedIn social media profile" href='https://www.linkedin.com/in/namitasrao/' target='_blank'><i class='fa fa-linkedin'></i></a>
+                <a aria-label="opens new tab to Namita's Behance social media profile" href='https://www.behance.net/namitar' target='_blank'><i class='fa fa-behance'></i></a>
+            </div>
         </header>
-        <div>
-            <h3>Interested in breaking into UX? 💡</h3>
-            <p>Book a coffee chat with me to learn more! I offer mentorship, portfolio reviews, and interview preparation. Sign up below on my Calendly:</p>
+        <div id="mentorcontent">
+            <div id="mentortext">
+                <img alt="animated gif of a coffee cup with a heart on the mug" src="images/coffee.gif"></a>
+                <h3>Interested in breaking into UX?</h3>
+                <p>Book a coffee chat with me on my Calendly to learn more!
+                I offer mentorship, portfolio reviews, and interview preparation. </br></p>
+            </div>
+          
             <!-- Calendly inline widget begin -->
             <div class="calendly-inline-widget" data-url="https://calendly.com/namita-rao/coffeechat" style="min-width:320px;height:630px;"></div>
             <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>

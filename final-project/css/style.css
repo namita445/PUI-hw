@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 
 #logo {
+    justify-content: flex-start;
     width: 75px;
     margin: 30px;
 }
@@ -14,21 +15,17 @@ body {
 nav {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-}
-
-h3 {
-    margin-left: 40px;
 }
 
 .nav-main{
     display: flex;
+    justify-content: space-evenly;
     flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;
+    align-items: center;
 }
 
 .nav-items{
+    justify-content: center;
     padding: 20px;
     flex-grow: 0.8;
     align-items: center;
@@ -80,7 +77,7 @@ nav > a:hover {
     border-radius: 40px;
     padding: 10px 30px;
     font-weight: 500;
-    font-size: 24px;
+    font-size: 20px;
 }
 
 #tag1{
@@ -114,8 +111,37 @@ nav > a:hover {
     background-color: #93ccb4;
 }
 
+#tinderjump{
+    color:black;
+    font-size: 18px;
+    font-weight: 800;
+    background-color: #f9d7ff; 
+}
+
+#rimsysjump{
+    color:black;
+    font-size: 18px;
+    font-weight: 800;
+    background-color: #edddff; 
+}
+
+#homejump{
+    color:black;
+    font-size: 18px;
+    font-weight: 800;
+    background-color: #bae6ffb3; 
+}
+
+#spinjump{
+    color:black;
+    font-size: 18px;
+    font-weight: 800;
+    background-color: #ffe2cd; 
+}
+
 #about{
     display: flex;
+    height: 80vh;
     justify-content: center;
     align-items: center;
     margin-left: 60px;
@@ -123,14 +149,40 @@ nav > a:hover {
     flex-direction: row;
 }
 
+.social{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin: 20px;
+}
+.social a{
+    font-size: 20px;
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    color: black;
+}
+
+.social a:hover{
+    color: #cdafe2;
+}
+
+
+#backgroundleft{
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 80px;
+    margin-left: 60px;
+    margin-right:60px;
+    width:50vw;
+    flex-direction:column;
+}
 
 #background-content{
     display: flex;
     justify-content: center;
-    align-items: flex-start;
-    margin-left: 60px;
-    margin-right:60px;
-    flex-direction: column;
+    flex-direction: row;
 }
 
 #aboutpic{
@@ -138,10 +190,41 @@ nav > a:hover {
 }
 
 #abouttext{
-    padding: 50px; 
+    padding: 50px 50px 0px 50px; 
     flex-grow: 2;
 }
 
+#mentortext{
+    text-align: center;
+    padding: 50px 0px 50px 80px; 
+    width: 35%;
+}
+
+#mentortext > img{
+    width:30%;
+}
+
+#workcontent{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0;
+    padding-top: 0;
+    padding-left: 10%;
+    width: 70%;
+
+}
+
+
+#quicklinks{
+    justify-content: center;
+    align-items: center; 
+}
+
+.calendly-inline-widget{
+    flex-grow: 2; 
+}
 /*Following is from https://forum.squarespace.com/topic/195193-bouncing-scroll-down-indicator-in-squarespace-71/*/
 .arrow {
     position: absolute;
@@ -176,10 +259,26 @@ nav > a:hover {
     }
 }
 
+#bgtxt {
+    padding:10px;
+    width:80%;
+}
+
+#bgpins {
+    padding:20px;
+    width:30vw;
+}
+
+#name {
+    font-weight: 600;
+    font-weight: bold;
+    margin-left: 20px;
+    font-size: 50px;
+}
+
 h1{
     font-weight: 200;
-    margin-left: 30px;
-    padding-top: 50px;
+    padding-top: 0px;
     font-size: 50px;
 }
 
@@ -202,6 +301,18 @@ h2{
     width: 100vw;
     height:100vh;
     overflow: hidden;
+}
+
+#backgroundmentor{
+    background-color: #FBEBED;
+    width: 100vw;
+    height:auto;
+}
+
+#mentorcontent{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
 }
 
 .container{
@@ -232,13 +343,26 @@ h2{
 }
 
 .studytitle{
+    font-weight: bolder;
     justify-content: flex-start;
 }
 
 .studycover{
-    height: 300px;
-    width: auto;
-    z-index: 2 ;
+    height: 320px;
+    padding: 50px;
+}
+
+figcaption{
+    font-size:20px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 60vw;
 }
 
 #google {
@@ -258,7 +382,7 @@ h2{
 }
 
 button{
-    border: #ffafaf solid 2px;
+    border: #000000 solid 2px;
     font-size: 20px;
     border-radius: 30px;
     font-weight: 700;

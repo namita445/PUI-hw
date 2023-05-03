@@ -17,7 +17,7 @@ gsap.utils.toArray('.studycover').forEach(image => {
             start: "top bottom",
             end: "bottom top",
             scrub: 0.5,
-            markers: true,
+            //markers: true,
             onUpdate: self => {
                 const direction = self.direction;
                 if (direction === -1) {

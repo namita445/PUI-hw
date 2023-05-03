@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
 
 <head>
     <title>Namita Rao's Portfolio</title>
     <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/cursor.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
         <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
         <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
@@ -19,31 +20,40 @@
 <body>
     <section id="background">
         <header class="nav-main">
-            <a href="index.html"><img id="logo" src="logo/initials.png"></a>
+            <img id="logo" alt="personal logo of the initials 'nr' in a galaxy design" src="logo/initials.png">
             <nav class="nav-items">
-                <a href="index.html">Home</a>
-                <a href="work.html">Work</a>
-                <a href="https://drive.google.com/file/d/1alKSdgrVxvfV6UrDmJOWCgTDhWSAVEGC/view?usp=share_link">Resume</a>
-                <a href="mentor.html">Mentorship</a>
+                <a aria-label="refreshes home page" href="index.html">Home</a>
+                <a aria-label="page of UX Design case studies" href="work.html">Work</a>
+                <a aria-label="opens up a new tab of a Google Drive link to resume" href="https://drive.google.com/file/d/1alKSdgrVxvfV6UrDmJOWCgTDhWSAVEGC/view?usp=share_link" target='_blank'>Resume</a>
+                <a aria-label="page to book mentorship appointments" href="mentor.html">Mentorship</a>
             </nav>
+            <div class='social'>
+                <a aria-label="opens new tab to Namita's LinkedIn social media profile" href='https://www.linkedin.com/in/namitasrao/' target='_blank'><i class='fa fa-linkedin'></i></a>
+                <a aria-label="opens new tab to Namita's Behance social media profile" href='https://www.behance.net/namitar' target='_blank'><i class='fa fa-behance'></i></a>
+            </div>
         </header>
         <div id="background-content">
-            <h1>Namita Rao</h1>
-            <h3>is an Interaction Designer at Carnegie Mellon University</h3>
-            <div id="home-tags">
-                <div class="tag" id="tag1">College Advice</div>
-                <div class="tag" id="tag2">
-                    <a href="https://drive.google.com/file/d/1alKSdgrVxvfV6UrDmJOWCgTDhWSAVEGC/view?usp=share_link">Career Mentorship</a>
+            <div id="backgroundleft">
+                <h1 id="name">Namita Rao ✨</h1>
+                <img id="bgtxt" alt="is an interaction designer, passionate about creating human-centered products" src="images/backgroundtxt.png">
+                <div id="home-tags">
+                    <div class="tag" id="tag1">College Advice</div>
+                    <div class="tag" id="tag2">
+                        <a href="https://drive.google.com/file/d/1alKSdgrVxvfV6UrDmJOWCgTDhWSAVEGC/view?usp=share_link">Career Mentorship</a>
+                    </div>
+                    <div class="tag" id="tag3">Design Tips</div>
                 </div>
-                <div class="tag" id="tag3">Design Tips</div>
             </div>
+            <img id="bgpins" alt = "design showing different colored Pinterest-styled 'pins' of traits and interests" src="images/bgpins.png">
+        </div>
+        <div class="arrow">
+            <span></span>
         </div>
     </section>
     <main>
         <section>
             <div id="about">
-                    <img id="aboutpic" src="images/me.png">
-                
+                <img id="aboutpic" alt ="portrait of Namita Rao cropped in a circle" src="images/mesmall.png">
                 <div id="abouttext">
                     <h2>About Me</h2>
                     <p>I’m a senior studying Human-Computer Interaction and Computer Science @ Carnegie Mellon University, 
