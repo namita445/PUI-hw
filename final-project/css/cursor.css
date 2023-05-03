@@ -1,0 +1,32 @@
+/*From https://codepen.io/ionz149/pen/xxKRyKd*/
+
+.cursor {
+    position: fixed;
+    background-color: black;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    z-index: 1;
+    transition: 0.3s cubic-bezier(0.75, -1.27, 0.3, 2.33) transform,
+        0.2s cubic-bezier(0.75, -0.27, 0.3, 1.33) opacity;
+    user-select: none;
+    pointer-events: none;
+    z-index: 10000;
+    transform: scale(1);
+}
+
+.cursor-follower {
+    position: fixed;
+    border:1px solid rgb(255, 125, 125);
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    z-index: 1;
+    transition: 0.6s cubic-bezier(0.75, -1.27, 0.3, 2.33) transform,
+        0.2s cubic-bezier(0.75, -0.27, 0.3, 1.33) opacity, 0.2s cubic-bezier(0.75, -0.27, 0.3, 1.33) background;
+    user-select: none;
+    pointer-events: none;
+    z-index: 10000;
+    transform: translate(2px, 2px);
+
+}

@@ -1,5 +1,8 @@
 {
   "devDependencies": {
     "@grcmichael/gscroll": "^1.0.15"
+  },
+  "dependencies": {
+    "custom-cursor.js": "^1.3.9"
   }
 }

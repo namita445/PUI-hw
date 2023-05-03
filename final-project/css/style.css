@@ -18,7 +18,7 @@ nav {
 }
 
 h3 {
-    margin-left: 20px;
+    margin-left: 40px;
 }
 
 .nav-main{
@@ -36,13 +36,14 @@ h3 {
 
 nav > a {
     font-size: 24px;
-    color: black;
+    color:  #3a2749;
+    border-radius: 40px;
+    padding: 10px 30px;
     display: inline-block;
     font-weight: 800;
     text-decoration: none;
-    padding: 10px 30px;
     position: relative;
-
+    transition: color 2s ease;
 }
 
 nav > a:active {
@@ -50,8 +51,9 @@ nav > a:active {
 }
   
 nav > a:hover {
-    background-color: #CDAFE2;
     color: white;
+    background-color: #cdafe2;
+    transition: background-color 1.8s ease;
     border-radius: 40px;
     padding: 10px 30px;
 }
@@ -59,9 +61,18 @@ nav > a:hover {
 #home-tags{
     display:flex;
     flex-wrap: wrap;
-    justify-items:first baseline;
+    justify-items: first baseline;
     gap: 20px;
     padding: 20px;
+}
+
+@keyframes opacityFade {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }
 
 .tag{
@@ -76,12 +87,59 @@ nav > a:hover {
     background-color: #E65969; 
 }
 
+#tag1:hover{
+    background-color: #f17381; 
+}
+
 #tag2{
     background-color: #F09163;
+    color:white;
+    text-decoration: none;
+}
+
+#tag2 > a:visited{
+    text-decoration: none;
+    color:white;
+}
+
+#tag2:hover{
+    background-color: #f7aa84;
 }
 
 #tag3{
     background-color: #7CB49D;
+}
+
+#tag3:hover{
+    background-color: #93ccb4;
+}
+
+#about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 60px;
+    margin-right:60px;
+    flex-direction: row;
+}
+
+
+#background-content{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 60px;
+    margin-right:60px;
+    flex-direction: column;
+}
+
+#aboutpic{
+    padding: 50px;
+}
+
+#abouttext{
+    padding: 50px; 
+    flex-grow: 2;
 }
 
 /*Following is from https://forum.squarespace.com/topic/195193-bouncing-scroll-down-indicator-in-squarespace-71/*/
@@ -122,12 +180,11 @@ h1{
     font-weight: 200;
     margin-left: 30px;
     padding-top: 50px;
-    font-size: 36px;
+    font-size: 50px;
 }
 
 h2{
     font-weight: 200;
-    margin-left: 30px;
     padding-top: 50px;
     font-size: 36px;
 }
@@ -200,135 +257,6 @@ h2{
     background-color: rgb(161, 217, 244);
 }
 
-.product-list{
-    margin-top: 50px;
-    width: 80%;
-    flex-direction: row;
-    justify-content: center;
-    font-size: 26px;
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-}
-
-#detail{
-    margin-top: 50px;
-    font-size: 26px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
-    flex-wrap: wrap;
-    align-items: center;
-}
-
-#detail-img{
-    width: 600px;
-    height: 600px;
-    border: #000000 solid 3px; 
-}
-
-.product{
-    padding: 10px;
-    margin: 10px;
-    max-width: min-content;
-}
-
-.cart{
-    text-align: center;
-    margin-top: 50px;
-    margin-left: auto;
-    width: calc(75% - 100px);
-    font-size: 26px;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    padding-right: 10%;
-}
-
-#cart-list{
-    display: flex;
-    flex-direction: column;
-}
-
-.cart-item{
-    display: flex;
-    width: 100%;
-    align-items: flex-start; 
-}
-
-.cart-img{
-    width: 125px;
-    height: 125px;
-    border: #000000 solid 3px; 
-}
-
-.cart-checkout{
-    display: flex;
-    text-align: left;
-    width: auto;
-    border-top: #000000 solid 5px; 
-}
-
-.cart-button-section{
-    text-align:right;
-    margin-right: 20px;
-}
-
-.cart-total {
-    margin-left: 200px;
-    margin-top: auto;
-    margin-bottom: auto;
-    flex-grow: 1;
-}
-
-.cart-price{
-    font-size: 30px;
-    margin: auto;
-    padding: 20px;
-}
-
-.item-price{
-    font-size: smaller;
-    margin: auto;
-    padding: 20px;
-}
-.product:hover{
-    background-color: yellow;
-}
-
-.product-title{
-    text-decoration: #D3D3D3 underline 1px;
-    font-size: smaller;
-}
-
-.product-img{
-    width: 300px;
-    height: 300px;
-    border: #000000 solid 3px; 
-}
-
-.cart-title{
-    text-align: left;
-    width: auto;
-    margin-top: auto;
-    margin-bottom: auto;
-    flex-grow: 1;
-}
-
-.cart-info{
-    text-align: left;
-    margin: 10px;
-    font-size: 20px;
-    width: auto;
-    margin-top: auto;
-    margin-bottom: auto;
-    flex-grow: 1;
-}
-
 button{
     border: #ffafaf solid 2px;
     font-size: 20px;
@@ -342,40 +270,3 @@ button:hover{
     background-color: white;
 }
 
-figcaption{
-    font-size:14px;
-    font-weight: 700;
-}
-
-figcaption:hover{
-    cursor:pointer;
-    text-decoration: underline;
-}
-
-a:visited { 
-    text-decoration: none; 
-    color: black; 
-}
-
-#detail-wrapper{
-    font-weight: 700;
-    padding: 30px;
-}
-
-.detail-checkout{
-    display: flex;
-    flex-direction: row; 
-    align-items: center;
-}
-
-#detail-selection{
-    display: flex;
-    flex-direction: column;  
-    flex-wrap: wrap;
-    max-width: 350px;
-    padding: 20px;
-}
-
-.select-item{
-    padding: 20px;
-}

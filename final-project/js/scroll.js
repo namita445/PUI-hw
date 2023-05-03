@@ -1,10 +1,17 @@
 gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollToPlugin);
+
 
 ScrollTrigger.defaults({scroller: ".casestudies"});
 
 gsap.utils.toArray('.studycover').forEach(image => {
+    gsap.set(image, {
+        opacity: 0
+    })
     gsap.to(image, {
         opacity: 0,
+        duration: 2,
+        y : 0,
         scrollTrigger:{
             trigger: image,
             start: "top bottom",
@@ -23,16 +30,9 @@ gsap.utils.toArray('.studycover').forEach(image => {
                 } else {
                     // Scroll is going down
                     gsap.to(image, {
-                        y: -80,
                         opacity: 1,
+                        y: -80,
                         duration: 1
-                    });
-                }
-            },
-            onToggle: self => {
-                if (self.direction === 1) {
-                    gsap.to(image, {
-                        opacity: 1
                     });
                 }
             }
