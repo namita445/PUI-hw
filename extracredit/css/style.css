@@ -1,0 +1,58 @@
+#scrollbar {
+    position: relative;
+    width: 40px;
+    user-select: none;
+    height: 520px;
+    border: 1px solid black;
+    background-color: #9a9a9a;
+  }
+  
+  .container{
+    display: flex;
+    flex-direction: row;
+  }
+  .image{
+    width: 15px;
+    margin-top:12px;
+    pointer-events: none;
+  }
+
+  #posnum{
+    padding: 50px;
+    font-size: 30px;
+  }
+
+  .scrollcontrol{
+    position: absolute;
+    width: 38px;
+    text-align: center;
+    border: 1px solid black;
+    height: 40px;
+    background-color: #d5d5d5;
+    cursor: pointer;
+  }
+  
+  #up {
+    top: 0;
+  }
+  
+  #down {
+    bottom: 0;
+  }
+  
+  #thumb {
+    position: absolute;
+    user-select: none;
+    top: 40px;
+    width: 38px;
+    text-align: center;
+    height: 40px;
+    border: 1px solid black;
+    background-color: #d5d5d5;
+    cursor: grab;
+  }
+  
+  #thumb:active {
+    cursor: grabbing;
+  }
+  
